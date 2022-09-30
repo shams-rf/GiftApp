@@ -31,6 +31,7 @@ struct LaunchView: View {
                     Spacer()
                     
                     Text("Get started by logging in or create a new account")
+                        .multilineTextAlignment(.center)
                     
                     Spacer()
                     
@@ -58,7 +59,7 @@ struct LaunchView: View {
                 }
                 .sheet(isPresented: $loginFormShowing, onDismiss: checkLogin) {
                     
-                    
+                    BusinessLoginForm(formShowing: $loginFormShowing)
                 }
                 
                 Button {
@@ -82,6 +83,7 @@ struct LaunchView: View {
                 
                 Spacer()
             }
+            .padding()
             .onAppear {
                 
                 checkLogin()

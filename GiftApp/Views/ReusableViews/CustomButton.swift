@@ -12,7 +12,7 @@ struct CustomButton: View {
         
         Rectangle()
             .frame(width: 250, height: 60)
-            .foregroundColor(.blue)
+            .foregroundColor(.red)
             .cornerRadius(10)
             .shadow(color: .gray, radius: 10, x: 10, y: 10)
     }

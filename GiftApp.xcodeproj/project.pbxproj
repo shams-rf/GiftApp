@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DBEAFA0C28E79111004C3CB1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */; };
+		DBEAFA1228E7956A004C3CB1 /* BusinessLoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */; };
 		DBF1FBF428E77EA5008E436B /* GiftAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FBF328E77EA5008E436B /* GiftAppApp.swift */; };
 		DBF1FBF628E77EA5008E436B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FBF528E77EA5008E436B /* ContentView.swift */; };
 		DBF1FBF828E77EA5008E436B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF1FBF728E77EA5008E436B /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginForm.swift; sourceTree = "<group>"; };
 		DBF1FBF028E77EA5008E436B /* GiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF1FBF328E77EA5008E436B /* GiftAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftAppApp.swift; sourceTree = "<group>"; };
 		DBF1FBF528E77EA5008E436B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DBEAFA1028E7955E004C3CB1 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
 		DBF1FBE728E77EA5008E436B = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 			children = (
 				DBF1FC0B28E7883D008E436B /* LaunchView.swift */,
 				DBF1FBF528E77EA5008E436B /* ContentView.swift */,
+				DBEAFA1028E7955E004C3CB1 /* Business */,
 				DBF1FC0F28E78E6C008E436B /* ReusableViews */,
 			);
 			path = Views;
@@ -198,6 +209,7 @@
 				DBF1FC0C28E7883D008E436B /* LaunchView.swift in Sources */,
 				DBF1FBF428E77EA5008E436B /* GiftAppApp.swift in Sources */,
 				DBEAFA0C28E79111004C3CB1 /* CustomButton.swift in Sources */,
+				DBEAFA1228E7956A004C3CB1 /* BusinessLoginForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,10 +6,96 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct LaunchView: View {
+    
+    @State var loggedIn = false
+    @State var loginFormShowing = false
+    @State var createAccountFormShowing = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        if !loggedIn {
+            
+            VStack(spacing: 20) {
+                
+                Group {
+                    
+                    Spacer()
+                    
+                    Text("Welcome to Business Login")
+                        .font(.title)
+                        .bold()
+                    
+                    Spacer()
+                    
+                    Text("Get started by logging in or create a new account")
+                    
+                    Spacer()
+                    
+                    Image("deliverybike")
+                        .resizable()
+                        .scaledToFit()
+                        .padding()
+                    
+                    Spacer()
+                }
+                
+                Button {
+                    
+                    loginFormShowing = true
+                } label: {
+                    
+                    ZStack {
+                        
+                        CustomButton()
+                        
+                        Text("Login")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                }
+                .sheet(isPresented: $loginFormShowing, onDismiss: checkLogin) {
+                    
+                    
+                }
+                
+                Button {
+                    
+                    createAccountFormShowing = true
+                } label: {
+                    
+                    ZStack {
+                        
+                        CustomButton()
+                        
+                        Text("Create Account")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                }
+                .sheet(isPresented: $createAccountFormShowing, onDismiss: checkLogin) {
+                    
+                    
+                }
+                
+                Spacer()
+            }
+            .onAppear {
+                
+                checkLogin()
+            }
+        }
+        else {
+            
+            ContentView()
+        }
+    }
+    
+    func checkLogin() {
+        
+        loggedIn = Auth.auth().currentUser == nil ? false : true
     }
 }
 

@@ -15,15 +15,18 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack {
+        TabView {
             
-            Text("Welcome")
-            
-            Button("Sign out") {
-                
-                try! Auth.auth().signOut()
-                loggedIn = false
-            }
+            ProductsView()
+                .tabItem {
+                    
+                    VStack {
+                        
+                        Image(systemName: "list.bullet")
+                        
+                        Text("Products")
+                    }
+                }
         }
     }
 }

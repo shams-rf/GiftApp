@@ -12,5 +12,4 @@ struct Business: Hashable, Identifiable {
     var id: String
     var name: String
     var address: String
-    var products: String
 }

@@ -6,16 +6,30 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct ContentView: View {
+    
+    @Binding var loggedIn: Bool
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        VStack {
+            
+            Text("Welcome")
+            
+            Button("Sign out") {
+                
+                try! Auth.auth().signOut()
+                loggedIn = false
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(loggedIn: .constant(Bool(true)))
     }
 }

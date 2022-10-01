@@ -78,7 +78,7 @@ struct LaunchView: View {
                 }
                 .sheet(isPresented: $createAccountFormShowing, onDismiss: checkLogin) {
                     
-                    
+                    CreateAccountForm(formShowing: $createAccountFormShowing)
                 }
                 
                 Spacer()
@@ -91,7 +91,7 @@ struct LaunchView: View {
         }
         else {
             
-            ContentView()
+            ContentView(loggedIn: $loggedIn)
         }
     }
     

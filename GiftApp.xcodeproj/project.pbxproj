@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4352C128E8402000C51B44 /* CreateAccountForm.swift */; };
+		DB6AEA0F28E8E10900C917FB /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA0E28E8E10900C917FB /* Business.swift */; };
 		DBEAFA0C28E79111004C3CB1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */; };
 		DBEAFA1228E7956A004C3CB1 /* BusinessLoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */; };
 		DBF1FBF428E77EA5008E436B /* GiftAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FBF328E77EA5008E436B /* GiftAppApp.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		DB4352C128E8402000C51B44 /* CreateAccountForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountForm.swift; sourceTree = "<group>"; };
+		DB6AEA0E28E8E10900C917FB /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginForm.swift; sourceTree = "<group>"; };
 		DBF1FBF028E77EA5008E436B /* GiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 		DBF1FC0A28E7880B008E436B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DB6AEA0E28E8E10900C917FB /* Business.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				DBF1FC0E28E78C00008E436B /* ContentModel.swift in Sources */,
 				DBF1FC0C28E7883D008E436B /* LaunchView.swift in Sources */,
 				DBF1FBF428E77EA5008E436B /* GiftAppApp.swift in Sources */,
+				DB6AEA0F28E8E10900C917FB /* Business.swift in Sources */,
 				DBEAFA0C28E79111004C3CB1 /* CustomButton.swift in Sources */,
 				DBEAFA1228E7956A004C3CB1 /* BusinessLoginForm.swift in Sources */,
 			);

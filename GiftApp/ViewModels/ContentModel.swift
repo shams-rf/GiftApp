@@ -11,5 +11,5 @@ import FirebaseAuth
 
 class ContentModel: ObservableObject {
     
-    
+    @Published var businesses: [Business] = []
 }

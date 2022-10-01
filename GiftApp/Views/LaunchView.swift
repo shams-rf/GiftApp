@@ -30,15 +30,15 @@ struct LaunchView: View {
                     
                     Spacer()
                     
-                    Text("Get started by logging in or create a new account")
-                        .multilineTextAlignment(.center)
-                    
-                    Spacer()
-                    
                     Image("deliverybike")
                         .resizable()
                         .scaledToFit()
                         .padding()
+                    
+                    Spacer()
+                    
+                    Text("Get started by logging in or create a new account")
+                        .multilineTextAlignment(.center)
                     
                     Spacer()
                 }

@@ -25,7 +25,15 @@ struct ProductsView: View {
                 
                 ForEach(model.products, id:\.self) { product in
                     
-                    ProductSection(product: product)
+                    NavigationLink {
+                        
+                        ProductDetailView(product: product)
+                    } label: {
+                        
+                        ProductSection(product: product)
+                    }
+                    .tint(.white)
+
                 }
             }
             .navigationTitle("Products")

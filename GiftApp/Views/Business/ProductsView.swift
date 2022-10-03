@@ -21,11 +21,11 @@ struct ProductsView: View {
         
         NavigationView {
             
-            VStack {
+            VStack(alignment: .leading) {
                 
                 ForEach(model.products, id:\.self) { product in
                     
-                    Text(product.name)
+                    ProductSection(product: product)
                 }
             }
             .navigationTitle("Products")

@@ -21,6 +21,9 @@ struct AddProductView: View {
     
     var currentBusinessUID = Auth.auth().currentUser?.uid ?? ""
     
+    @State var showImagePicker = false
+    @State var image: UIImage?
+    
     var body: some View {
         
         VStack {
@@ -32,9 +35,30 @@ struct AddProductView: View {
             Image("package")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 300, height: 300, alignment: .center)
+                .frame(width: 100, height: 100, alignment: .center)
             
             Form {
+                
+                Section {
+                    
+                    if let image = self.image {
+                        
+                        Image(uiImage: image)
+                            .resizable()
+                            .cornerRadius(5)
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                    }
+                    
+                    Button("Add Image") {
+                        
+                        showImagePicker = true
+                    }
+                    .sheet(isPresented: $showImagePicker, onDismiss: nil) {
+                        
+                        ImagePicker(image: $image)
+                    }
+                }
                 
                 Section {
                     

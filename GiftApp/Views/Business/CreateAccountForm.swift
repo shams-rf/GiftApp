@@ -38,6 +38,7 @@ struct CreateAccountForm: View {
                 Section {
                     
                     TextField("Email", text: $email)
+                        .textInputAutocapitalization(.never)
                     
                     TextField("Name", text: $name)
                     

@@ -34,6 +34,7 @@ struct BusinessLoginForm: View {
                 Section {
                     
                     TextField("Email", text: $email)
+                        .textInputAutocapitalization(.never)
                     
                     SecureField("Password", text: $password)
                 }

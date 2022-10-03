@@ -13,6 +13,7 @@
 		DB6AEA0F28E8E10900C917FB /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA0E28E8E10900C917FB /* Business.swift */; };
 		DB6AEA1328E8E50800C917FB /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA1228E8E50800C917FB /* ProductsView.swift */; };
 		DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */; };
+		DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0230528EB432E006B08FE /* ImagePicker.swift */; };
 		DBEAFA0C28E79111004C3CB1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */; };
 		DBEAFA1228E7956A004C3CB1 /* BusinessLoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */; };
 		DBF1FBF428E77EA5008E436B /* GiftAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FBF328E77EA5008E436B /* GiftAppApp.swift */; };
@@ -33,6 +34,7 @@
 		DB6AEA0E28E8E10900C917FB /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		DB6AEA1228E8E50800C917FB /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		DBE0230528EB432E006B08FE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginForm.swift; sourceTree = "<group>"; };
 		DBF1FBF028E77EA5008E436B /* GiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +67,6 @@
 				DB4352C128E8402000C51B44 /* CreateAccountForm.swift */,
 				DB6AEA1228E8E50800C917FB /* ProductsView.swift */,
 				DB28582628EAE48D00518858 /* AddProductView.swift */,
-				DB28582828EB1C2000518858 /* ProductSection.swift */,
 				DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */,
 			);
 			path = Business;
@@ -140,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */,
+				DB28582828EB1C2000518858 /* ProductSection.swift */,
+				DBE0230528EB432E006B08FE /* ImagePicker.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */,
 				DBF1FBF628E77EA5008E436B /* ContentView.swift in Sources */,
 				DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */,
 				DBF1FC0E28E78C00008E436B /* ContentModel.swift in Sources */,

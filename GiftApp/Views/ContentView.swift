@@ -13,6 +13,10 @@ struct ContentView: View {
     
     @Binding var loggedIn: Bool
     
+    @EnvironmentObject var model: ContentModel
+    
+    var currentBusinessUID = Auth.auth().currentUser?.uid ?? ""
+    
     var body: some View {
         
         TabView {
@@ -26,7 +30,20 @@ struct ContentView: View {
                         
                         Text("Products")
                     }
+                    .onAppear {
+                        
+                        model.getProductsByBusiness(UID: currentBusinessUID)
+                    }
                 }
+            Button("Sign out") {
+                
+                try! Auth.auth().signOut()
+                loggedIn = false
+            }
+            .tabItem {
+                
+                Text("Account")
+            }
         }
     }
 }
@@ -34,5 +51,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(loggedIn: .constant(Bool(true)))
+            .environmentObject(ContentModel())
     }
 }

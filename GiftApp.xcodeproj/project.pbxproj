@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB28582728EAE48D00518858 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB28582628EAE48D00518858 /* AddProductView.swift */; };
 		DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4352C128E8402000C51B44 /* CreateAccountForm.swift */; };
 		DB6AEA0F28E8E10900C917FB /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA0E28E8E10900C917FB /* Business.swift */; };
 		DB6AEA1328E8E50800C917FB /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA1228E8E50800C917FB /* ProductsView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB28582628EAE48D00518858 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
 		DB4352C128E8402000C51B44 /* CreateAccountForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountForm.swift; sourceTree = "<group>"; };
 		DB6AEA0E28E8E10900C917FB /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		DB6AEA1228E8E50800C917FB /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */,
 				DB4352C128E8402000C51B44 /* CreateAccountForm.swift */,
 				DB6AEA1228E8E50800C917FB /* ProductsView.swift */,
+				DB28582628EAE48D00518858 /* AddProductView.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */,
 				DBF1FC0E28E78C00008E436B /* ContentModel.swift in Sources */,
 				DBF1FC0C28E7883D008E436B /* LaunchView.swift in Sources */,
+				DB28582728EAE48D00518858 /* AddProductView.swift in Sources */,
 				DBF1FBF428E77EA5008E436B /* GiftAppApp.swift in Sources */,
 				DB6AEA0F28E8E10900C917FB /* Business.swift in Sources */,
 				DBEAFA0C28E79111004C3CB1 /* CustomButton.swift in Sources */,

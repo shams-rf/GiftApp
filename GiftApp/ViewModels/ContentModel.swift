@@ -12,6 +12,7 @@ import FirebaseAuth
 class ContentModel: ObservableObject {
     
     @Published var businesses: [Business] = []
+    @Published var products: [Product] = []
     
     init() {
         
@@ -32,6 +33,8 @@ class ContentModel: ObservableObject {
             }
             else if let querySnapshot = querySnapshot {
                 
+                var allBusinesses: [Business] = []
+                
                 for doc in querySnapshot.documents {
                     
                     let data = doc.data()
@@ -42,12 +45,71 @@ class ContentModel: ObservableObject {
                     
                     let business = Business(id: id, name: name, address: address)
                     
-                    self.businesses.append(business)
+                    allBusinesses.append(business)
                 }
+                
+                self.businesses = allBusinesses
             }
             else {
                 
                 print("No data returned")
+            }
+        }
+    }
+    
+    func getProductsByBusiness(UID: String) {
+        
+        let db = Firestore.firestore()
+        
+        let products = db.collection("products")
+        
+        let query = products.whereField("business", in: [UID])
+        
+        query.getDocuments { querySnapshot, error in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
+            }
+            else if let querySnapshot = querySnapshot {
+                
+                var allProducts: [Product] = []
+                
+                for doc in querySnapshot.documents {
+                    
+                    let data = doc.data()
+                    
+                    let id = doc.documentID
+                    let business = data["business"] as? String ?? ""
+                    let name = data["name"] as? String ?? ""
+                    let description = data["description"] as? String ?? ""
+                    let price = data["price"] as? String ?? ""
+                    
+                    let product = Product(id: id, business: business, name: name, description: description, price: price)
+                    
+                    allProducts.append(product)
+                }
+                
+                self.products = allProducts
+            }
+            else {
+                
+                print("No data returned")
+            }
+        }
+    }
+    
+    func addProduct(UID: String, name: String, description: String, price: String) {
+        
+        let db = Firestore.firestore()
+        
+        let products = db.collection("products")
+        
+        products.document().setData(["business":UID, "name":name, "description":description, "price":price]) { error in
+            
+            if error != nil {
+                
+                print(error!.localizedDescription)
             }
         }
     }

@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import Firebase
 
 struct ProductsView: View {
     
     @EnvironmentObject var model: ContentModel
+    
+    var currentBusinessUID = Auth.auth().currentUser?.uid ?? ""
+    
+    @State var showAddProductView = false
     
     var body: some View {
         
@@ -17,12 +23,32 @@ struct ProductsView: View {
             
             VStack {
                 
-                ForEach(model.businesses, id:\.self) { business in
+                ForEach(model.products, id:\.self) { product in
                     
-                    Text(business.name)
+                    Text(product.name)
                 }
             }
             .navigationTitle("Products")
+            .toolbar {
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    
+                    Button {
+                        
+                        showAddProductView = true
+                    } label: {
+                        
+                        Image(systemName: "plus")
+                    }
+                    .sheet(isPresented: $showAddProductView, onDismiss: {
+                        
+                        model.getProductsByBusiness(UID: currentBusinessUID)
+                    }) {
+                        
+                        AddProductView(formShowing: $showAddProductView)
+                    }
+                }
+            }
         }
     }
 }

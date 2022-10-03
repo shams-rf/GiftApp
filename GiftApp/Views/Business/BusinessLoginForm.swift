@@ -18,47 +18,42 @@ struct BusinessLoginForm: View {
     
     var body: some View {
         
-        NavigationView {
+        VStack {
             
-            VStack {
+            Text("Business Login")
+                .font(.largeTitle)
+                .bold()
+            
+            Image("deliveryvan")
+                .resizable()
+                .scaledToFit()
+                .padding()
+            
+            Form {
                 
-                Text("Business Login")
-                    .font(.largeTitle)
-                    .bold()
+                Section {
+                    
+                    TextField("Email", text: $email)
+                    
+                    SecureField("Password", text: $password)
+                }
                 
-                Image("deliveryvan")
-                    .resizable()
-                    .scaledToFit()
-                    .padding()
-                
-                Form {
+                if errorMessage != nil {
                     
                     Section {
                         
-                        TextField("Email", text: $email)
-                        
-                        SecureField("Password", text: $password)
-                    }
-                    
-                    if errorMessage != nil {
-                        
-                        Section {
-                            
-                            Text(errorMessage!)
-                        }
-                    }
-                    
-                    Button("Login") {
-                        
-                        login()
+                        Text(errorMessage!)
                     }
                 }
-                .navigationBarHidden(true)
-                .cornerRadius(10)
                 
+                Button("Login") {
+                    
+                    login()
+                }
             }
-            .padding()
+            .cornerRadius(10)
         }
+        .padding()
     }
     
     func login() {

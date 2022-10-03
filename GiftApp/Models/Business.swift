@@ -13,3 +13,12 @@ struct Business: Hashable, Identifiable {
     var name: String
     var address: String
 }
+
+struct Product: Hashable, Identifiable {
+    
+    var id: String
+    var business: String
+    var name: String
+    var description: String
+    var price: String
+}

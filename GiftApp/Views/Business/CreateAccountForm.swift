@@ -22,51 +22,46 @@ struct CreateAccountForm: View {
     
     var body: some View {
         
-        NavigationView {
+        VStack {
             
-            VStack {
+            Text("Create Account")
+                .font(.largeTitle)
+                .bold()
+            
+            Image("deliveryman")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 250, height: 250, alignment: .center)
+            
+            Form {
                 
-                Text("Create Account")
-                    .font(.largeTitle)
-                    .bold()
+                Section {
+                    
+                    TextField("Email", text: $email)
+                    
+                    TextField("Name", text: $name)
+                    
+                    TextField("Address", text: $address)
+                    
+                    SecureField("Password", text: $password)
+                }
                 
-                Image("deliveryman")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 250, height: 250, alignment: .center)
-                
-                Form {
+                if errorMessage != nil {
                     
                     Section {
                         
-                        TextField("Email", text: $email)
-                        
-                        TextField("Name", text: $name)
-                        
-                        TextField("Address", text: $address)
-                        
-                        SecureField("Password", text: $password)
-                    }
-                    
-                    if errorMessage != nil {
-                        
-                        Section {
-                            
-                            Text(errorMessage!)
-                        }
-                    }
-                    
-                    Button("Create Account") {
-                        
-                        createAccount()
+                        Text(errorMessage!)
                     }
                 }
-                .navigationBarHidden(true)
-                .cornerRadius(10)
                 
+                Button("Create Account") {
+                    
+                    createAccount()
+                }
             }
-            .padding()
+            .cornerRadius(10)
         }
+        .padding()
     }
     
     func createAccount() {

@@ -42,6 +42,7 @@ struct ProductsView: View {
                     }
                     .sheet(isPresented: $showAddProductView, onDismiss: {
                         
+                        // Fetch products for currently logged in business if card is dismissed
                         model.getProductsByBusiness(UID: currentBusinessUID)
                     }) {
                         

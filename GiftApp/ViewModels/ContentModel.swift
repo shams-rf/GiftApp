@@ -19,6 +19,7 @@ class ContentModel: ObservableObject {
         getBusinesses()
     }
     
+    // Method to fetch all businesses in the database
     func getBusinesses() {
         
         let db = Firestore.firestore()
@@ -57,6 +58,7 @@ class ContentModel: ObservableObject {
         }
     }
     
+    // Method to fetch all products from a chosen business
     func getProductsByBusiness(UID: String) {
         
         let db = Firestore.firestore()
@@ -99,6 +101,7 @@ class ContentModel: ObservableObject {
         }
     }
     
+    // Method to add products to database and link them to chosen business using businessUID
     func addProduct(UID: String, name: String, description: String, price: String) {
         
         let db = Firestore.firestore()

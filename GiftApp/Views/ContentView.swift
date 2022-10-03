@@ -32,6 +32,7 @@ struct ContentView: View {
                     }
                     .onAppear {
                         
+                        // Get products of currently logged in business
                         model.getProductsByBusiness(UID: currentBusinessUID)
                     }
                 }

@@ -16,6 +16,8 @@ struct LaunchView: View {
     
     var body: some View {
         
+        // If business not logged in, display welcome page
+        // Welcome page allows user to choose login or create account options
         if !loggedIn {
             
             VStack(spacing: 20) {
@@ -45,6 +47,7 @@ struct LaunchView: View {
                 
                 Button {
                     
+                    // Show login form
                     loginFormShowing = true
                 } label: {
                     
@@ -64,6 +67,7 @@ struct LaunchView: View {
                 
                 Button {
                     
+                    // Show create account form
                     createAccountFormShowing = true
                 } label: {
                     
@@ -97,6 +101,7 @@ struct LaunchView: View {
     
     func checkLogin() {
         
+        // State if a user is logged in or not
         loggedIn = Auth.auth().currentUser == nil ? false : true
     }
 }

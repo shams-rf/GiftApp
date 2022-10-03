@@ -13,6 +13,7 @@ struct GiftAppApp: App {
     
     init() {
         
+        // Initialise FirebaseApp
         FirebaseApp.configure()
     }
     

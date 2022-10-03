@@ -39,12 +39,16 @@ struct CreateAccountForm: View {
                     
                     TextField("Email", text: $email)
                         .textInputAutocapitalization(.never)
+                        .disableAutocorrection(true)
                     
                     TextField("Name", text: $name)
+                        .disableAutocorrection(true)
                     
                     TextField("Address", text: $address)
                     
                     SecureField("Password", text: $password)
+                        .textInputAutocapitalization(.never)
+                        .disableAutocorrection(true)
                 }
                 
                 if errorMessage != nil {

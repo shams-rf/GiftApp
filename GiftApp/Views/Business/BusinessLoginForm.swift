@@ -35,8 +35,11 @@ struct BusinessLoginForm: View {
                     
                     TextField("Email", text: $email)
                         .textInputAutocapitalization(.never)
+                        .disableAutocorrection(true)
                     
                     SecureField("Password", text: $password)
+                        .textInputAutocapitalization(.never)
+                        .disableAutocorrection(true)
                 }
                 
                 if errorMessage != nil {

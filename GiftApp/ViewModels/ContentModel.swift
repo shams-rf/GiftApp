@@ -8,6 +8,8 @@
 import Foundation
 import Firebase
 import FirebaseAuth
+import FirebaseStorage
+import UIKit
 
 class ContentModel: ObservableObject {
     
@@ -102,17 +104,47 @@ class ContentModel: ObservableObject {
     }
     
     // Method to add products to database and link them to chosen business using businessUID
-    func addProduct(UID: String, name: String, description: String, price: String) {
+    func addProduct(UID: String, name: String, description: String, price: String, image: UIImage) {
         
         let db = Firestore.firestore()
         
-        let products = db.collection("products")
+        let ref = db.collection("products").document()
         
-        products.document().setData(["business":UID, "name":name, "description":description, "price":price]) { error in
+        let productID = ref.documentID
+        
+        ref.setData(["business":UID, "name":name, "description":description, "price":price]) { error in
             
             if error != nil {
                 
                 print(error!.localizedDescription)
+            }
+        }
+        
+        storeImage(BusinessUID: UID, productID: productID, image: image)
+    }
+    
+    func storeImage(BusinessUID: String, productID: String, image: UIImage?) {
+        
+        let ref = Storage.storage().reference().child("\(BusinessUID)/\(productID)")
+        let imageData = image?.jpegData(compressionQuality: 0.5)
+        guard imageData != nil else {
+            
+            return
+        }
+        
+        ref.putData(imageData!) { metadata, error in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
+            }
+        }
+        
+        ref.downloadURL { url, error in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
             }
         }
     }

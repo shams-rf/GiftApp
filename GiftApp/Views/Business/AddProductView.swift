@@ -79,9 +79,9 @@ struct AddProductView: View {
                 
                 Button("Submit") {
                     
-                    if(name != "" && description != "" && price != "") {
+                    if(name != "" && description != "" && price != "" && image != nil) {
                         
-                        model.addProduct(UID: currentBusinessUID, name: name, description: description, price: price)
+                        model.addProduct(UID: currentBusinessUID, name: name, description: description, price: price, image: image!)
                         
                         formShowing = false
                     }

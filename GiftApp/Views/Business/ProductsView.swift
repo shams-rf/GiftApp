@@ -27,7 +27,7 @@ struct ProductsView: View {
                     
                     NavigationLink {
                         
-                        ProductDetailView(product: product)
+                        ProductDetailView(product: product, businessUID: currentBusinessUID)
                     } label: {
                         
                         ProductSection(product: product, businessUID: currentBusinessUID)

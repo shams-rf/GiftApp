@@ -91,7 +91,15 @@ class ContentModel: ObservableObject {
                     
                     let product = Product(id: id, business: business, name: name, description: description, price: price)
                     
-                    allProducts.append(product)
+                    // Sort array of products in alphabetical order
+                    if product.name > allProducts.last?.name ?? "" {
+                        
+                        allProducts.append(product)
+                    }
+                    else {
+                        
+                        allProducts.insert(product, at: 0)
+                    }
                 }
                 
                 self.products = allProducts

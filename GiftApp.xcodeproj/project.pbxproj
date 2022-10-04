@@ -13,6 +13,7 @@
 		DB6AEA0F28E8E10900C917FB /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA0E28E8E10900C917FB /* Business.swift */; };
 		DB6AEA1328E8E50800C917FB /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA1228E8E50800C917FB /* ProductsView.swift */; };
 		DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */; };
+		DB7DC85328EC4CCA00D109AA /* EditProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DC85228EC4CCA00D109AA /* EditProductView.swift */; };
 		DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0230528EB432E006B08FE /* ImagePicker.swift */; };
 		DBE0230928EB5A74006B08FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230828EB5A74006B08FE /* FirebaseAuth */; };
 		DBE0230B28EB5A74006B08FE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230A28EB5A74006B08FE /* FirebaseFirestore */; };
@@ -37,6 +38,7 @@
 		DB6AEA0E28E8E10900C917FB /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		DB6AEA1228E8E50800C917FB /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		DB7DC85228EC4CCA00D109AA /* EditProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductView.swift; sourceTree = "<group>"; };
 		DBE0230528EB432E006B08FE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginForm.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				DB6AEA1228E8E50800C917FB /* ProductsView.swift */,
 				DB28582628EAE48D00518858 /* AddProductView.swift */,
 				DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */,
+				DB7DC85228EC4CCA00D109AA /* EditProductView.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				DBF1FC0C28E7883D008E436B /* LaunchView.swift in Sources */,
 				DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */,
 				DB28582728EAE48D00518858 /* AddProductView.swift in Sources */,
+				DB7DC85328EC4CCA00D109AA /* EditProductView.swift in Sources */,
 				DBF1FBF428E77EA5008E436B /* GiftAppApp.swift in Sources */,
 				DB6AEA0F28E8E10900C917FB /* Business.swift in Sources */,
 				DBEAFA0C28E79111004C3CB1 /* CustomButton.swift in Sources */,

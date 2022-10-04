@@ -36,6 +36,10 @@ struct ProductsView: View {
 
                 }
             }
+            .onAppear(perform: {
+                
+                model.getProductsByBusiness(UID: currentBusinessUID)
+            })
             .navigationTitle("Products")
             .toolbar {
                 

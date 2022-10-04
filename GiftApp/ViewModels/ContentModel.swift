@@ -131,6 +131,7 @@ class ContentModel: ObservableObject {
         storeImage(BusinessUID: UID, productID: productID, image: image)
     }
     
+    // Method to store image in Firebase Storage in folder with name as business UID and image name as product ID
     func storeImage(BusinessUID: String, productID: String, image: UIImage?) {
         
         let ref = Storage.storage().reference().child("\(BusinessUID)/\(productID)")
@@ -147,5 +148,23 @@ class ContentModel: ObservableObject {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    // Method to edit product details
+    func editProduct(BusinessUID: String, productID: String, name: String, description: String, price: String, image: UIImage) {
+        
+        let db = Firestore.firestore()
+        
+        let ref = db.collection("products").document(productID)
+        
+        ref.updateData(["name":name, "description":description, "price":price]) { error in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
+            }
+        }
+        
+        storeImage(BusinessUID: BusinessUID, productID: productID, image: image)
     }
 }

@@ -16,6 +16,8 @@ struct ProductDetailView: View {
     var businessUID: String
     @State var image: UIImage?
     
+    @State var showEditProduct = false
+    
     var body: some View {
         
         VStack {
@@ -45,7 +47,7 @@ struct ProductDetailView: View {
             
             Button {
                 
-                
+                showEditProduct = true
             } label: {
                 
                 ZStack(alignment: .center) {
@@ -57,9 +59,18 @@ struct ProductDetailView: View {
                         .shadow(color: .gray, radius: 10, x: 10, y: 10)
                     
                     Text("Edit")
+                        .bold()
                 }
             }
             .tint(.white)
+            .sheet(isPresented: $showEditProduct, onDismiss: {
+                
+                // Fetch products for currently logged in business if card is dismissed
+                model.getProductsByBusiness(UID: businessUID)
+            }) {
+                
+                EditProductView(formShowing: $showEditProduct, product: product, name: product.name, description: product.description, price: product.price)
+            }
         }
         .onAppear {
             

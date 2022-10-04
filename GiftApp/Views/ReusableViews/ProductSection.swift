@@ -21,12 +21,13 @@ struct ProductSection: View {
         ZStack(alignment: .leading) {
             
             Rectangle()
-                .foregroundColor(.gray)
+                .foregroundColor(Constants.pastelRed)
                 .cornerRadius(10)
             
             HStack {
                 
                 Text(product.name)
+                    .font(Font.custom("Comfortaa-Regular", size: 15))
                 
                 Spacer()
                 

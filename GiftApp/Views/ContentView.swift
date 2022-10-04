@@ -36,11 +36,15 @@ struct ContentView: View {
                         model.getProductsByBusiness(UID: currentBusinessUID)
                     }
                 }
-            Button("Sign out") {
+            Button(action: {
                 
                 try! Auth.auth().signOut()
                 loggedIn = false
-            }
+            }, label: {
+                
+                Text("Sign out")
+                    .font(Font.custom("Comfortaa-Regular", size: 15))
+            })
             .tabItem {
                 
                 VStack {

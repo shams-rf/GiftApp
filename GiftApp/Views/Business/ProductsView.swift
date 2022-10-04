@@ -21,44 +21,53 @@ struct ProductsView: View {
         
         NavigationView {
             
-            VStack(alignment: .leading) {
+            ScrollView {
                 
-                ForEach(model.products, id:\.self) { product in
+                VStack(alignment: .leading) {
                     
-                    NavigationLink {
+                    ForEach(model.products, id:\.self) { product in
                         
-                        ProductDetailView(product: product, businessUID: currentBusinessUID)
-                    } label: {
-                        
-                        ProductSection(product: product, businessUID: currentBusinessUID)
-                    }
-                    .tint(.white)
+                        NavigationLink {
+                            
+                            ProductDetailView(product: product, businessUID: currentBusinessUID)
+                        } label: {
+                            
+                            ProductSection(product: product, businessUID: currentBusinessUID)
+                        }
+                        .tint(.white)
 
-                }
-            }
-            .onAppear(perform: {
-                
-                model.getProductsByBusiness(UID: currentBusinessUID)
-            })
-            .navigationTitle("Products")
-            .toolbar {
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    
-                    Button {
-                        
-                        showAddProductView = true
-                    } label: {
-                        
-                        Image(systemName: "plus")
                     }
-                    .sheet(isPresented: $showAddProductView, onDismiss: {
+                }
+                .onAppear(perform: {
+                    
+                    model.getProductsByBusiness(UID: currentBusinessUID)
+                })
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    
+                    ToolbarItem(placement: .principal) {
                         
-                        // Fetch products for currently logged in business if card is dismissed
-                        model.getProductsByBusiness(UID: currentBusinessUID)
-                    }) {
+                        Text("Products")
+                            .font(Font.custom("Comfortaa-Bold", size: 20))
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         
-                        AddProductView(formShowing: $showAddProductView)
+                        Button {
+                            
+                            showAddProductView = true
+                        } label: {
+                            
+                            Image(systemName: "plus")
+                        }
+                        .sheet(isPresented: $showAddProductView, onDismiss: {
+                            
+                            // Fetch products for currently logged in business if card is dismissed
+                            model.getProductsByBusiness(UID: currentBusinessUID)
+                        }) {
+                            
+                            AddProductView(formShowing: $showAddProductView)
+                        }
                     }
                 }
             }

@@ -32,14 +32,15 @@ struct ProductDetailView: View {
                 }
                 
                 Text(product.name)
-                    .font(.title)
-                    .bold()
+                    .font(Font.custom("Comfortaa-Bold", size: 30))
                     .padding(.leading)
                 
                 Text(product.description)
+                    .font(Font.custom("Comfortaa-Regular", size: 15))
                     .padding(.leading)
                 
                 Text("€\(product.price)")
+                    .font(Font.custom("Comfortaa-Regular", size: 15))
                     .padding(.leading)
             }
             
@@ -59,7 +60,7 @@ struct ProductDetailView: View {
                         .shadow(color: .gray, radius: 10, x: 10, y: 10)
                     
                     Text("Edit")
-                        .bold()
+                        .font(Font.custom("Comfortaa-Bold", size: 15))
                 }
             }
             .tint(.white)

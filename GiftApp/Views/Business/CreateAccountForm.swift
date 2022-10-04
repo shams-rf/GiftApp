@@ -25,8 +25,7 @@ struct CreateAccountForm: View {
         VStack {
             
             Text("Create Account")
-                .font(.largeTitle)
-                .bold()
+                .font(Font.custom("Comfortaa-Bold", size: 30))
             
             Image("deliveryman")
                 .resizable()
@@ -38,15 +37,19 @@ struct CreateAccountForm: View {
                 Section {
                     
                     TextField("Email", text: $email)
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
                     
                     TextField("Name", text: $name)
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
                         .disableAutocorrection(true)
                     
                     TextField("Address", text: $address)
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
                     
                     SecureField("Password", text: $password)
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
                 }
@@ -56,13 +59,19 @@ struct CreateAccountForm: View {
                     Section {
                         
                         Text(errorMessage!)
+                            .font(Font.custom("Comfortaa-Regular", size: 15))
                     }
                 }
                 
-                Button("Create Account") {
+                Button {
                     
                     createAccount()
+                } label: {
+                    
+                    Text("Create Account")
+                        .font(Font.custom("Comfortaa-Bold", size: 15))
                 }
+
             }
             .cornerRadius(10)
         }

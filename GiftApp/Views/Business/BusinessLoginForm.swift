@@ -21,8 +21,7 @@ struct BusinessLoginForm: View {
         VStack {
             
             Text("Business Login")
-                .font(.largeTitle)
-                .bold()
+                .font(Font.custom("Comfortaa-Bold", size: 30))
             
             Image("deliveryvan")
                 .resizable()
@@ -34,10 +33,12 @@ struct BusinessLoginForm: View {
                 Section {
                     
                     TextField("Email", text: $email)
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
                     
                     SecureField("Password", text: $password)
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
                 }
@@ -47,13 +48,19 @@ struct BusinessLoginForm: View {
                     Section {
                         
                         Text(errorMessage!)
+                            .font(Font.custom("Comfortaa-Regular", size: 15))
                     }
                 }
                 
-                Button("Login") {
+                Button {
                     
                     login()
+                } label: {
+                    
+                    Text("Login")
+                        .font(Font.custom("Comfortaa-Bold", size: 15))
                 }
+
             }
             .cornerRadius(10)
         }

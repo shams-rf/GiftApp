@@ -20,77 +20,85 @@ struct LaunchView: View {
         // Welcome page allows user to choose login or create account options
         if !loggedIn {
             
-            VStack(spacing: 20) {
+            ZStack {
                 
-                Group {
-                    
-                    Spacer()
-                    
-                    Text("Welcome to Business Login")
-                        .font(.title)
-                        .bold()
-                    
-                    Spacer()
-                    
-                    Image("deliverybike")
-                        .resizable()
-                        .scaledToFit()
-                        .padding()
-                    
-                    Spacer()
-                    
-                    Text("Get started by logging in or create a new account")
-                        .multilineTextAlignment(.center)
-                    
-                    Spacer()
-                }
+                Rectangle()
+                    .foregroundColor(Constants.pastelRed)
+                    .ignoresSafeArea()
                 
-                Button {
+                VStack(spacing: 20) {
                     
-                    // Show login form
-                    loginFormShowing = true
-                } label: {
-                    
-                    ZStack {
+                    Group {
                         
-                        CustomButton()
+                        Spacer()
                         
-                        Text("Login")
-                            .foregroundColor(.white)
-                            .bold()
+                        Text("Welcome to Business Login")
+                            .font(Font.custom("Comfortaa-Bold", size: 25))
+                        
+                        Spacer()
+                        
+                        Image("deliverybike")
+                            .resizable()
+                            .scaledToFit()
+                            .padding()
+                        
+                        Spacer()
+                        
+                        Text("Get started by logging in or create a new account")
+                            .multilineTextAlignment(.center)
+                            .font(Font.custom("Comfortaa-Regular", size: 15))
+                        
+                        Spacer()
                     }
-                }
-                .sheet(isPresented: $loginFormShowing, onDismiss: checkLogin) {
                     
-                    BusinessLoginForm(formShowing: $loginFormShowing)
-                }
-                
-                Button {
-                    
-                    // Show create account form
-                    createAccountFormShowing = true
-                } label: {
-                    
-                    ZStack {
+                    Button {
                         
-                        CustomButton()
+                        // Show login form
+                        loginFormShowing = true
+                    } label: {
                         
-                        Text("Create Account")
-                            .foregroundColor(.white)
-                            .bold()
+                        ZStack {
+                            
+                            CustomButton()
+                            
+                            Text("Login")
+                                .font(Font.custom("Comfortaa-Bold", size: 15))
+                                .foregroundColor(.white)
+                        }
                     }
-                }
-                .sheet(isPresented: $createAccountFormShowing, onDismiss: checkLogin) {
+                    .sheet(isPresented: $loginFormShowing, onDismiss: checkLogin) {
+                        
+                        BusinessLoginForm(formShowing: $loginFormShowing)
+                    }
                     
-                    CreateAccountForm(formShowing: $createAccountFormShowing)
+                    Button {
+                        
+                        // Show create account form
+                        createAccountFormShowing = true
+                    } label: {
+                        
+                        ZStack {
+                            
+                            CustomButton()
+                            
+                            Text("Create Account")
+                                .font(Font.custom("Comfortaa-Bold", size: 15))
+                                .foregroundColor(.white)
+                                .bold()
+                        }
+                    }
+                    .sheet(isPresented: $createAccountFormShowing, onDismiss: checkLogin) {
+                        
+                        CreateAccountForm(formShowing: $createAccountFormShowing)
+                    }
+                    
+                    Spacer()
                 }
-                
-                Spacer()
-            }
-            .padding()
-            .onAppear {
-                
-                checkLogin()
+                .padding()
+                .onAppear {
+                    
+                    checkLogin()
+                }
             }
         }
         else {

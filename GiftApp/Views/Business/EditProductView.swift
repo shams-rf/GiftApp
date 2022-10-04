@@ -31,8 +31,7 @@ struct EditProductView: View {
         VStack {
             
             Text("Edit Product")
-                .font(.largeTitle)
-                .bold()
+                .font(Font.custom("Comfortaa-Bold", size: 30))
             
             Image("deliveryscene")
                 .resizable()
@@ -52,10 +51,14 @@ struct EditProductView: View {
                             .frame(width: 100, height: 100)
                     }
                     
-                    Button("Add Image") {
+                    Button(action: {
                         
                         showImagePicker = true
-                    }
+                    }, label: {
+                        
+                        Text("Add Image")
+                            .font(Font.custom("Comfortaa-Bold", size: 15))
+                    })
                     .sheet(isPresented: $showImagePicker, onDismiss: nil) {
                         
                         ImagePicker(image: $image)
@@ -65,10 +68,13 @@ struct EditProductView: View {
                 Section {
                     
                     TextField(product.name, text: $name)
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
                     
                     TextField(product.description, text: $description)
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
                     
                     TextField(product.price, text: $price)
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
                 }
                 
                 if errorMessage != nil {
@@ -76,10 +82,11 @@ struct EditProductView: View {
                     Section {
                         
                         Text(errorMessage!)
+                            .font(Font.custom("Comfortaa-Regular", size: 15))
                     }
                 }
                 
-                Button("Submit") {
+                Button {
                     
                     if(name != "" && description != "" && price != "" && image != nil) {
                         
@@ -91,6 +98,10 @@ struct EditProductView: View {
                         
                         errorMessage = "Missing field"
                     }
+                } label: {
+                    
+                    Text("Submit")
+                        .font(Font.custom("Comfortaa-Bold", size: 15))
                 }
             }
             .cornerRadius(10)

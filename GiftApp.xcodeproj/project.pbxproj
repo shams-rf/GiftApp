@@ -14,6 +14,12 @@
 		DB6AEA1328E8E50800C917FB /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA1228E8E50800C917FB /* ProductsView.swift */; };
 		DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */; };
 		DB7DC85328EC4CCA00D109AA /* EditProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DC85228EC4CCA00D109AA /* EditProductView.swift */; };
+		DB7DC86428EC7FF600D109AA /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB7DC85F28EC7FF500D109AA /* Comfortaa-Regular.ttf */; };
+		DB7DC86528EC7FF600D109AA /* FONTLOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = DB7DC86028EC7FF500D109AA /* FONTLOG.txt */; };
+		DB7DC86628EC7FF600D109AA /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = DB7DC86128EC7FF600D109AA /* OFL.txt */; };
+		DB7DC86728EC7FF600D109AA /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB7DC86228EC7FF600D109AA /* Comfortaa-Light.ttf */; };
+		DB7DC86828EC7FF600D109AA /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB7DC86328EC7FF600D109AA /* Comfortaa-Bold.ttf */; };
+		DB7DC86B28EC8B7900D109AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DC86A28EC8B7900D109AA /* Constants.swift */; };
 		DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0230528EB432E006B08FE /* ImagePicker.swift */; };
 		DBE0230928EB5A74006B08FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230828EB5A74006B08FE /* FirebaseAuth */; };
 		DBE0230B28EB5A74006B08FE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230A28EB5A74006B08FE /* FirebaseFirestore */; };
@@ -39,6 +45,13 @@
 		DB6AEA1228E8E50800C917FB /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		DB7DC85228EC4CCA00D109AA /* EditProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductView.swift; sourceTree = "<group>"; };
+		DB7DC85B28EC7B3100D109AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DB7DC85F28EC7FF500D109AA /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Regular.ttf"; path = "Assets/comfortaa/Comfortaa-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		DB7DC86028EC7FF500D109AA /* FONTLOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FONTLOG.txt; path = Assets/comfortaa/FONTLOG.txt; sourceTree = SOURCE_ROOT; };
+		DB7DC86128EC7FF600D109AA /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OFL.txt; path = Assets/comfortaa/OFL.txt; sourceTree = SOURCE_ROOT; };
+		DB7DC86228EC7FF600D109AA /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Light.ttf"; path = "Assets/comfortaa/Comfortaa-Light.ttf"; sourceTree = SOURCE_ROOT; };
+		DB7DC86328EC7FF600D109AA /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Bold.ttf"; path = "Assets/comfortaa/Comfortaa-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		DB7DC86A28EC8B7900D109AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DBE0230528EB432E006B08FE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginForm.swift; sourceTree = "<group>"; };
@@ -68,6 +81,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB7DC85E28EC7FDB00D109AA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DB7DC86328EC7FF600D109AA /* Comfortaa-Bold.ttf */,
+				DB7DC86228EC7FF600D109AA /* Comfortaa-Light.ttf */,
+				DB7DC85F28EC7FF500D109AA /* Comfortaa-Regular.ttf */,
+				DB7DC86028EC7FF500D109AA /* FONTLOG.txt */,
+				DB7DC86128EC7FF600D109AA /* OFL.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DB7DC86928EC8B5D00D109AA /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				DB7DC86A28EC8B7900D109AA /* Constants.swift */,
+				DB7DC85E28EC7FDB00D109AA /* Fonts */,
+			);
+			path = Styling;
+			sourceTree = "<group>";
+		};
 		DBEAFA1028E7955E004C3CB1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,10 +134,12 @@
 		DBF1FBF228E77EA5008E436B /* GiftApp */ = {
 			isa = PBXGroup;
 			children = (
+				DB7DC85B28EC7B3100D109AA /* Info.plist */,
 				DBF1FBF328E77EA5008E436B /* GiftAppApp.swift */,
 				DBF1FC0828E787FC008E436B /* Views */,
 				DBF1FC0928E78805008E436B /* ViewModels */,
 				DBF1FC0A28E7880B008E436B /* Models */,
+				DB7DC86928EC8B5D00D109AA /* Styling */,
 				DBF1FBF728E77EA5008E436B /* Assets.xcassets */,
 				DBF1FC0128E77F4B008E436B /* GoogleService-Info.plist */,
 				DBF1FBF928E77EA5008E436B /* Preview Content */,
@@ -225,7 +261,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7DC86828EC7FF600D109AA /* Comfortaa-Bold.ttf in Resources */,
+				DB7DC86628EC7FF600D109AA /* OFL.txt in Resources */,
+				DB7DC86428EC7FF600D109AA /* Comfortaa-Regular.ttf in Resources */,
 				DBF1FBFB28E77EA5008E436B /* Preview Assets.xcassets in Resources */,
+				DB7DC86528EC7FF600D109AA /* FONTLOG.txt in Resources */,
+				DB7DC86728EC7FF600D109AA /* Comfortaa-Light.ttf in Resources */,
 				DBF1FBF828E77EA5008E436B /* Assets.xcassets in Resources */,
 				DBF1FC0228E77F4B008E436B /* GoogleService-Info.plist in Resources */,
 			);
@@ -243,6 +284,7 @@
 				DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */,
 				DBF1FC0E28E78C00008E436B /* ContentModel.swift in Sources */,
 				DB28582928EB1C2000518858 /* ProductSection.swift in Sources */,
+				DB7DC86B28EC8B7900D109AA /* Constants.swift in Sources */,
 				DBF1FC0C28E7883D008E436B /* LaunchView.swift in Sources */,
 				DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */,
 				DB28582728EAE48D00518858 /* AddProductView.swift in Sources */,
@@ -383,6 +425,7 @@
 				DEVELOPMENT_TEAM = Y99V3PSNQ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GiftApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -412,6 +455,7 @@
 				DEVELOPMENT_TEAM = Y99V3PSNQ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GiftApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

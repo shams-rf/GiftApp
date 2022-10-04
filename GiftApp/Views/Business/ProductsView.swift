@@ -30,7 +30,7 @@ struct ProductsView: View {
                         ProductDetailView(product: product)
                     } label: {
                         
-                        ProductSection(product: product)
+                        ProductSection(product: product, businessUID: currentBusinessUID)
                     }
                     .tint(.white)
 

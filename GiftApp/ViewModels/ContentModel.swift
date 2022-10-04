@@ -139,13 +139,5 @@ class ContentModel: ObservableObject {
                 print(error.localizedDescription)
             }
         }
-        
-        ref.downloadURL { url, error in
-            
-            if let error = error {
-                
-                print(error.localizedDescription)
-            }
-        }
     }
 }

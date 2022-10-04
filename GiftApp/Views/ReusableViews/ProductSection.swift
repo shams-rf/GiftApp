@@ -6,34 +6,71 @@
 //
 
 import SwiftUI
+import FirebaseStorage
 
 struct ProductSection: View {
     
+    @EnvironmentObject var model:ContentModel
+    
     var product: Product
+    var businessUID: String
+    @State var image: UIImage?
     
     var body: some View {
         
         ZStack(alignment: .leading) {
             
             Rectangle()
-                .frame(height: 50)
                 .foregroundColor(.gray)
                 .cornerRadius(10)
             
             HStack {
                 
-                Image(systemName: "house")
-                
                 Text(product.name)
+                
+                Spacer()
+                
+                if let image = image {
+                    
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(5)
+                }
             }
             .padding()
         }
         .padding(.horizontal)
+        .frame(height: 80)
+        .onAppear(perform: {
+            
+            getImage(productID: product.id, businessUID: businessUID)
+        })
+    }
+    
+    func getImage(productID: String, businessUID: String) {
+        
+        let ref = Storage.storage().reference().child("\(businessUID)/\(productID)")
+        
+        ref.downloadURL { url, error in
+            
+            if error == nil && url != nil {
+                
+                let data = try! Data(contentsOf: url!)
+                let image = UIImage(data: data as Data)
+                self.image = image
+            }
+            else {
+                
+                print(error!.localizedDescription)
+            }
+        }
     }
 }
 
 struct ProductSection_Previews: PreviewProvider {
     static var previews: some View {
-        ProductSection(product: Product(id: "", business: "", name: "Roses", description: "", price: ""))
+        ProductSection(product: Product(id: "", business: "", name: "Roses", description: "", price: ""), businessUID: "")
+            .environmentObject(ContentModel())
     }
 }

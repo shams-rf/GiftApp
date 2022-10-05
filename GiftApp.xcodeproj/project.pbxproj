@@ -118,9 +118,9 @@
 		DBEAFA1028E7955E004C3CB1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				DBF1FBF528E77EA5008E436B /* BusinessContentView.swift */,
 				DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */,
 				DB4352C128E8402000C51B44 /* CreateAccountForm.swift */,
+				DBF1FBF528E77EA5008E436B /* BusinessContentView.swift */,
 				DB6AEA1228E8E50800C917FB /* ProductsView.swift */,
 				DB28582628EAE48D00518858 /* AddProductView.swift */,
 				DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */,

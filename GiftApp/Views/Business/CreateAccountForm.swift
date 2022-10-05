@@ -41,7 +41,7 @@ struct CreateAccountForm: View {
                         .textInputAutocapitalization(.never)
                         .disableAutocorrection(true)
                     
-                    TextField("Name", text: $name)
+                    TextField("Business Name", text: $name)
                         .font(Font.custom("Comfortaa-Regular", size: 15))
                         .disableAutocorrection(true)
                     

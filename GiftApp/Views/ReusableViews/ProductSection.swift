@@ -57,9 +57,16 @@ struct ProductSection: View {
             
             if error == nil && url != nil {
                 
-                let data = try! Data(contentsOf: url!)
-                let image = UIImage(data: data as Data)
-                self.image = image
+                do {
+                    
+                    let data = try Data(contentsOf: url!)
+                    let image = UIImage(data: data as Data)
+                    self.image = image
+                }
+                catch {
+                    
+                    print(error.localizedDescription)
+                }
             }
             else {
                 

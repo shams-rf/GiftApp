@@ -25,6 +25,12 @@ struct ProductsView: View {
                 
                 VStack(alignment: .leading) {
                     
+                    if model.products == [] {
+                        
+                        Text("No products found, click + to add products")
+                            .font(Font.custom("Comfortaa-Regular", size: 15))
+                    }
+                    
                     ForEach(model.products, id:\.self) { product in
                         
                         NavigationLink {

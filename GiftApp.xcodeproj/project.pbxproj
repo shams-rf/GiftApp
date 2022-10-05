@@ -20,6 +20,7 @@
 		DB7DC86728EC7FF600D109AA /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB7DC86228EC7FF600D109AA /* Comfortaa-Light.ttf */; };
 		DB7DC86828EC7FF600D109AA /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB7DC86328EC7FF600D109AA /* Comfortaa-Bold.ttf */; };
 		DB7DC86B28EC8B7900D109AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DC86A28EC8B7900D109AA /* Constants.swift */; };
+		DBA32B6D28ED8D5A001C6A76 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA32B6C28ED8D5A001C6A76 /* LaunchView.swift */; };
 		DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0230528EB432E006B08FE /* ImagePicker.swift */; };
 		DBE0230928EB5A74006B08FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230828EB5A74006B08FE /* FirebaseAuth */; };
 		DBE0230B28EB5A74006B08FE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230A28EB5A74006B08FE /* FirebaseFirestore */; };
@@ -33,7 +34,7 @@
 		DBF1FC0228E77F4B008E436B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBF1FC0128E77F4B008E436B /* GoogleService-Info.plist */; };
 		DBF1FC0528E77FDE008E436B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DBF1FC0428E77FDE008E436B /* FirebaseAuth */; };
 		DBF1FC0728E77FDE008E436B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DBF1FC0628E77FDE008E436B /* FirebaseFirestore */; };
-		DBF1FC0C28E7883D008E436B /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FC0B28E7883D008E436B /* LaunchView.swift */; };
+		DBF1FC0C28E7883D008E436B /* BusinessLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FC0B28E7883D008E436B /* BusinessLaunchView.swift */; };
 		DBF1FC0E28E78C00008E436B /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FC0D28E78C00008E436B /* ContentModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		DB7DC86228EC7FF600D109AA /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Light.ttf"; path = "Assets/comfortaa/Comfortaa-Light.ttf"; sourceTree = SOURCE_ROOT; };
 		DB7DC86328EC7FF600D109AA /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Bold.ttf"; path = "Assets/comfortaa/Comfortaa-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		DB7DC86A28EC8B7900D109AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DBA32B6C28ED8D5A001C6A76 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		DBE0230528EB432E006B08FE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginForm.swift; sourceTree = "<group>"; };
@@ -61,7 +63,7 @@
 		DBF1FBF728E77EA5008E436B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBF1FBFA28E77EA5008E436B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBF1FC0128E77F4B008E436B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		DBF1FC0B28E7883D008E436B /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		DBF1FC0B28E7883D008E436B /* BusinessLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLaunchView.swift; sourceTree = "<group>"; };
 		DBF1FC0D28E78C00008E436B /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,7 +160,8 @@
 		DBF1FC0828E787FC008E436B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DBF1FC0B28E7883D008E436B /* LaunchView.swift */,
+				DBA32B6C28ED8D5A001C6A76 /* LaunchView.swift */,
+				DBF1FC0B28E7883D008E436B /* BusinessLaunchView.swift */,
 				DBF1FBF528E77EA5008E436B /* ContentView.swift */,
 				DBEAFA1028E7955E004C3CB1 /* Business */,
 				DBF1FC0F28E78E6C008E436B /* ReusableViews */,
@@ -280,12 +283,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */,
+				DBA32B6D28ED8D5A001C6A76 /* LaunchView.swift in Sources */,
 				DBF1FBF628E77EA5008E436B /* ContentView.swift in Sources */,
 				DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */,
 				DBF1FC0E28E78C00008E436B /* ContentModel.swift in Sources */,
 				DB28582928EB1C2000518858 /* ProductSection.swift in Sources */,
 				DB7DC86B28EC8B7900D109AA /* Constants.swift in Sources */,
-				DBF1FC0C28E7883D008E436B /* LaunchView.swift in Sources */,
+				DBF1FC0C28E7883D008E436B /* BusinessLaunchView.swift in Sources */,
 				DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */,
 				DB28582728EAE48D00518858 /* AddProductView.swift in Sources */,
 				DB7DC85328EC4CCA00D109AA /* EditProductView.swift in Sources */,

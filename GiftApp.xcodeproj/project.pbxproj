@@ -21,6 +21,8 @@
 		DB7DC86828EC7FF600D109AA /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB7DC86328EC7FF600D109AA /* Comfortaa-Bold.ttf */; };
 		DB7DC86B28EC8B7900D109AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DC86A28EC8B7900D109AA /* Constants.swift */; };
 		DBA32B6D28ED8D5A001C6A76 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA32B6C28ED8D5A001C6A76 /* LaunchView.swift */; };
+		DBA32B6F28ED9087001C6A76 /* LaunchViewCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA32B6E28ED9087001C6A76 /* LaunchViewCustomButton.swift */; };
+		DBA32B7128ED94A7001C6A76 /* CustomerLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA32B7028ED94A7001C6A76 /* CustomerLaunchView.swift */; };
 		DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0230528EB432E006B08FE /* ImagePicker.swift */; };
 		DBE0230928EB5A74006B08FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230828EB5A74006B08FE /* FirebaseAuth */; };
 		DBE0230B28EB5A74006B08FE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230A28EB5A74006B08FE /* FirebaseFirestore */; };
@@ -54,6 +56,8 @@
 		DB7DC86328EC7FF600D109AA /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comfortaa-Bold.ttf"; path = "Assets/comfortaa/Comfortaa-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		DB7DC86A28EC8B7900D109AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DBA32B6C28ED8D5A001C6A76 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		DBA32B6E28ED9087001C6A76 /* LaunchViewCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewCustomButton.swift; sourceTree = "<group>"; };
+		DBA32B7028ED94A7001C6A76 /* CustomerLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerLaunchView.swift; sourceTree = "<group>"; };
 		DBE0230528EB432E006B08FE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginForm.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		DBEAFA1028E7955E004C3CB1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				DBF1FBF528E77EA5008E436B /* ContentView.swift */,
 				DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */,
 				DB4352C128E8402000C51B44 /* CreateAccountForm.swift */,
 				DB6AEA1228E8E50800C917FB /* ProductsView.swift */,
@@ -162,7 +167,7 @@
 			children = (
 				DBA32B6C28ED8D5A001C6A76 /* LaunchView.swift */,
 				DBF1FC0B28E7883D008E436B /* BusinessLaunchView.swift */,
-				DBF1FBF528E77EA5008E436B /* ContentView.swift */,
+				DBA32B7028ED94A7001C6A76 /* CustomerLaunchView.swift */,
 				DBEAFA1028E7955E004C3CB1 /* Business */,
 				DBF1FC0F28E78E6C008E436B /* ReusableViews */,
 			);
@@ -191,6 +196,7 @@
 				DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */,
 				DB28582828EB1C2000518858 /* ProductSection.swift */,
 				DBE0230528EB432E006B08FE /* ImagePicker.swift */,
+				DBA32B6E28ED9087001C6A76 /* LaunchViewCustomButton.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */,
+				DBA32B6F28ED9087001C6A76 /* LaunchViewCustomButton.swift in Sources */,
 				DBA32B6D28ED8D5A001C6A76 /* LaunchView.swift in Sources */,
 				DBF1FBF628E77EA5008E436B /* ContentView.swift in Sources */,
 				DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */,
@@ -290,6 +297,7 @@
 				DB28582928EB1C2000518858 /* ProductSection.swift in Sources */,
 				DB7DC86B28EC8B7900D109AA /* Constants.swift in Sources */,
 				DBF1FC0C28E7883D008E436B /* BusinessLaunchView.swift in Sources */,
+				DBA32B7128ED94A7001C6A76 /* CustomerLaunchView.swift in Sources */,
 				DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */,
 				DB28582728EAE48D00518858 /* AddProductView.swift in Sources */,
 				DB7DC85328EC4CCA00D109AA /* EditProductView.swift in Sources */,

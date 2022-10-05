@@ -8,31 +8,86 @@
 import SwiftUI
 
 struct LaunchView: View {
+    
+    @State var selectedView = 0
+    
     var body: some View {
         
-        VStack {
+        if selectedView == 0 {
             
-            Text("Welcome to Gift App")
-                .font(Font.custom("Comfortaa-Bold", size: 30))
-            
-            Image("deliverylaunchview")
-                .resizable()
-                .scaledToFit()
-            
-            Text("I am a")
-                .font(Font.custom("Comfortaa-Regular", size: 15))
-            
-            Button {
+            ZStack {
                 
+                Rectangle()
+                    .foregroundColor(Constants.pastelBlue)
+                    .ignoresSafeArea()
                 
-            } label: {
-                
-                ZStack {
+                VStack {
                     
+                    Spacer()
                     
+                    Text("Welcome to Gift App")
+                        .font(Font.custom("Comfortaa-Bold", size: 30))
+                    
+                    Spacer()
+                    
+                    Text("Get started by selecting an option from below")
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
+                    
+                    Image("deliverylaunchview")
+                        .resizable()
+                        .scaledToFit()
+                    
+                    Spacer()
+                    
+                    Text("I am a")
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
+                    
+                    HStack {
+                        
+                        Button {
+                            
+                            self.selectedView = 1
+                        } label: {
+                            
+                            ZStack {
+                                
+                                LaunchViewCustomButton()
+                                
+                                Text("Customer")
+                                    .font(Font.custom("Comfortaa-Bold", size: 15))
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .padding()
+                        
+                        Button {
+                            
+                            self.selectedView = 2
+                        } label: {
+                            
+                            ZStack {
+                                
+                                LaunchViewCustomButton()
+                                
+                                Text("Business")
+                                    .font(Font.custom("Comfortaa-Bold", size: 15))
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .padding()
+                    }
+                    
+                    Spacer()
                 }
             }
-
+        }
+        else if selectedView == 1 {
+            
+            CustomerLaunchView()
+        }
+        else if selectedView == 2 {
+            
+            BusinessLaunchView()
         }
     }
 }

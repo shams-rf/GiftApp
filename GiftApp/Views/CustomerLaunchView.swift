@@ -30,6 +30,8 @@ struct CustomerLaunchView: View {
                     
                     Group {
                         
+                        Spacer()
+                        
                         Text("Welcome to Customer Login")
                             .font(Font.custom("Comfortaa-Bold", size: 24))
                         

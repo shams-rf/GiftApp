@@ -13,7 +13,7 @@ struct LaunchView: View {
     
     var body: some View {
         
-        NavigationView {
+        if selectedView == 0 {
             
             ZStack {
                 
@@ -22,6 +22,8 @@ struct LaunchView: View {
                     .ignoresSafeArea()
                 
                 VStack {
+                    
+                    Spacer()
                     
                     Text("Welcome to Gift App")
                         .font(Font.custom("Comfortaa-Bold", size: 30))
@@ -42,9 +44,9 @@ struct LaunchView: View {
                     
                     HStack {
                         
-                        NavigationLink {
+                        Button {
                             
-                            CustomerLaunchView()
+                            self.selectedView = 1
                         } label: {
                             
                             ZStack {
@@ -58,9 +60,9 @@ struct LaunchView: View {
                         }
                         .padding()
                         
-                        NavigationLink {
+                        Button {
                             
-                            BusinessLaunchView()
+                            self.selectedView = 2
                         } label: {
                             
                             ZStack {
@@ -79,7 +81,14 @@ struct LaunchView: View {
                 }
             }
         }
-        .navigationBarHidden(true)
+        else if selectedView == 1 {
+            
+            CustomerLaunchView()
+        }
+        else if selectedView == 2 {
+            
+            BusinessLaunchView()
+        }
     }
 }
 

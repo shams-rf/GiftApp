@@ -19,7 +19,7 @@ struct CustomerContentView: View {
         
         TabView {
             
-            ProductsView()
+            CustomerProductsView()
                 .tabItem {
                     
                     VStack {
@@ -30,8 +30,8 @@ struct CustomerContentView: View {
                     }
                     .onAppear {
                         
-                        // Get products of currently logged in business
-                        
+                        // Get all products by all businesses
+                        model.getAllProducts()
                     }
                 }
             Button(action: {

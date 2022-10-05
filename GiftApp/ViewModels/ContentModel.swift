@@ -18,6 +18,8 @@ class ContentModel: ObservableObject {
     
     init() {
         
+        try! Auth.auth().signOut()
+        
         getBusinesses()
     }
     
@@ -166,5 +168,41 @@ class ContentModel: ObservableObject {
         }
         
         storeImage(BusinessUID: BusinessUID, productID: productID, image: image)
+    }
+    
+    func getAllProducts() {
+        
+        let db = Firestore.firestore()
+        
+        let products = db.collection("products")
+        
+        products.getDocuments { querySnapshot, error in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
+            }
+            else if let querySnapshot = querySnapshot {
+                
+                var allProducts: [Product] = []
+                
+                for doc in querySnapshot.documents {
+                    
+                    let data = doc.data()
+                    
+                    let id = doc.documentID
+                    let business = data["business"] as? String ?? ""
+                    let name = data["name"] as? String ?? ""
+                    let description = data["description"] as? String ?? ""
+                    let price = data["price"] as? String ?? ""
+                    
+                    let product = Product(id: id, business: business, name: name, description: description, price: price)
+                    
+                    allProducts.append(product)
+                }
+                
+                self.products = allProducts
+            }
+        }
     }
 }

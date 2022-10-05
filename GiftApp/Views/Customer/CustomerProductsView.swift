@@ -13,10 +13,6 @@ struct CustomerProductsView: View {
     
     @EnvironmentObject var model: ContentModel
     
-    var currentBusinessUID = Auth.auth().currentUser?.uid ?? ""
-    
-    @State var showAddProductView = false
-    
     var body: some View {
         
         NavigationView {
@@ -27,20 +23,12 @@ struct CustomerProductsView: View {
                     
                     ForEach(model.products, id:\.self) { product in
                         
-                        NavigationLink {
-                            
-                            ProductDetailView(product: product, businessUID: currentBusinessUID)
-                        } label: {
-                            
-                            ProductSection(product: product, businessUID: currentBusinessUID)
-                        }
-                        .tint(.white)
-
+                        Text(product.name)
                     }
                 }
                 .onAppear(perform: {
                     
-                    model.getProductsByBusiness(UID: currentBusinessUID)
+                    model.getAllProducts()
                 })
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {

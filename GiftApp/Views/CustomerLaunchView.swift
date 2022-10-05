@@ -105,7 +105,7 @@ struct CustomerLaunchView: View {
         }
         else {
             
-            BusinessContentView(loggedIn: $loggedIn)
+            CustomerContentView(loggedIn: $loggedIn)
         }
     }
     

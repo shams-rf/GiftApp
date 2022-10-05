@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  BusinessContentView.swift
 //  GiftApp
 //
 //  Created by Shamsuddin Refaei on 30/09/2022.
@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 
-struct ContentView: View {
+struct BusinessContentView: View {
     
     @Binding var loggedIn: Bool
     
@@ -58,9 +58,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct BusinessContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(loggedIn: .constant(Bool(true)))
+        BusinessContentView(loggedIn: .constant(Bool(true)))
             .environmentObject(ContentModel())
     }
 }

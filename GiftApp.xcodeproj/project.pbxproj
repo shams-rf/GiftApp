@@ -30,7 +30,7 @@
 		DBEAFA0C28E79111004C3CB1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */; };
 		DBEAFA1228E7956A004C3CB1 /* BusinessLoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */; };
 		DBF1FBF428E77EA5008E436B /* GiftAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FBF328E77EA5008E436B /* GiftAppApp.swift */; };
-		DBF1FBF628E77EA5008E436B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FBF528E77EA5008E436B /* ContentView.swift */; };
+		DBF1FBF628E77EA5008E436B /* BusinessContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1FBF528E77EA5008E436B /* BusinessContentView.swift */; };
 		DBF1FBF828E77EA5008E436B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF1FBF728E77EA5008E436B /* Assets.xcassets */; };
 		DBF1FBFB28E77EA5008E436B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF1FBFA28E77EA5008E436B /* Preview Assets.xcassets */; };
 		DBF1FC0228E77F4B008E436B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBF1FC0128E77F4B008E436B /* GoogleService-Info.plist */; };
@@ -63,7 +63,7 @@
 		DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginForm.swift; sourceTree = "<group>"; };
 		DBF1FBF028E77EA5008E436B /* GiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF1FBF328E77EA5008E436B /* GiftAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftAppApp.swift; sourceTree = "<group>"; };
-		DBF1FBF528E77EA5008E436B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DBF1FBF528E77EA5008E436B /* BusinessContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessContentView.swift; sourceTree = "<group>"; };
 		DBF1FBF728E77EA5008E436B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBF1FBFA28E77EA5008E436B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBF1FC0128E77F4B008E436B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -108,10 +108,17 @@
 			path = Styling;
 			sourceTree = "<group>";
 		};
+		DBAC831A28EDA0E500BADAD5 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
 		DBEAFA1028E7955E004C3CB1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				DBF1FBF528E77EA5008E436B /* ContentView.swift */,
+				DBF1FBF528E77EA5008E436B /* BusinessContentView.swift */,
 				DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */,
 				DB4352C128E8402000C51B44 /* CreateAccountForm.swift */,
 				DB6AEA1228E8E50800C917FB /* ProductsView.swift */,
@@ -168,6 +175,7 @@
 				DBA32B6C28ED8D5A001C6A76 /* LaunchView.swift */,
 				DBF1FC0B28E7883D008E436B /* BusinessLaunchView.swift */,
 				DBA32B7028ED94A7001C6A76 /* CustomerLaunchView.swift */,
+				DBAC831A28EDA0E500BADAD5 /* Customer */,
 				DBEAFA1028E7955E004C3CB1 /* Business */,
 				DBF1FC0F28E78E6C008E436B /* ReusableViews */,
 			);
@@ -291,7 +299,7 @@
 				DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */,
 				DBA32B6F28ED9087001C6A76 /* LaunchViewCustomButton.swift in Sources */,
 				DBA32B6D28ED8D5A001C6A76 /* LaunchView.swift in Sources */,
-				DBF1FBF628E77EA5008E436B /* ContentView.swift in Sources */,
+				DBF1FBF628E77EA5008E436B /* BusinessContentView.swift in Sources */,
 				DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */,
 				DBF1FC0E28E78C00008E436B /* ContentModel.swift in Sources */,
 				DB28582928EB1C2000518858 /* ProductSection.swift in Sources */,

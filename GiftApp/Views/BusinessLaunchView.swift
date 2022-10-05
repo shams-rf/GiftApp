@@ -103,7 +103,7 @@ struct BusinessLaunchView: View {
         }
         else {
             
-            ContentView(loggedIn: $loggedIn)
+            BusinessContentView(loggedIn: $loggedIn)
         }
     }
     

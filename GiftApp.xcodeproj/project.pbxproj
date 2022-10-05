@@ -27,6 +27,7 @@
 		DBAC832028EDA6BA00BADAD5 /* CustomerCreateAccountForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC831F28EDA6BA00BADAD5 /* CustomerCreateAccountForm.swift */; };
 		DBAC832228EDA88100BADAD5 /* CustomerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC832128EDA88100BADAD5 /* CustomerContentView.swift */; };
 		DBAC832428EDA8D700BADAD5 /* CustomerProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC832328EDA8D700BADAD5 /* CustomerProductsView.swift */; };
+		DBAC832628EDC5BB00BADAD5 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAC832528EDC5BB00BADAD5 /* BasketView.swift */; };
 		DBE0230628EB432E006B08FE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0230528EB432E006B08FE /* ImagePicker.swift */; };
 		DBE0230928EB5A74006B08FE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230828EB5A74006B08FE /* FirebaseAuth */; };
 		DBE0230B28EB5A74006B08FE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DBE0230A28EB5A74006B08FE /* FirebaseFirestore */; };
@@ -66,6 +67,7 @@
 		DBAC831F28EDA6BA00BADAD5 /* CustomerCreateAccountForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerCreateAccountForm.swift; sourceTree = "<group>"; };
 		DBAC832128EDA88100BADAD5 /* CustomerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerContentView.swift; sourceTree = "<group>"; };
 		DBAC832328EDA8D700BADAD5 /* CustomerProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProductsView.swift; sourceTree = "<group>"; };
+		DBAC832528EDC5BB00BADAD5 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		DBE0230528EB432E006B08FE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DBEAFA0B28E79111004C3CB1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DBEAFA1128E7956A004C3CB1 /* BusinessLoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginForm.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				DBAC831F28EDA6BA00BADAD5 /* CustomerCreateAccountForm.swift */,
 				DBAC832128EDA88100BADAD5 /* CustomerContentView.swift */,
 				DBAC832328EDA8D700BADAD5 /* CustomerProductsView.swift */,
+				DBAC832528EDC5BB00BADAD5 /* BasketView.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				DBAC831E28EDA5C800BADAD5 /* CustomerLoginForm.swift in Sources */,
 				DB7DC86B28EC8B7900D109AA /* Constants.swift in Sources */,
 				DBF1FC0C28E7883D008E436B /* BusinessLaunchView.swift in Sources */,
+				DBAC832628EDC5BB00BADAD5 /* BasketView.swift in Sources */,
 				DBA32B7128ED94A7001C6A76 /* CustomerLaunchView.swift in Sources */,
 				DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */,
 				DB28582728EAE48D00518858 /* AddProductView.swift in Sources */,

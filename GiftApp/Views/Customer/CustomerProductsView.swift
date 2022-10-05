@@ -13,6 +13,8 @@ struct CustomerProductsView: View {
     
     @EnvironmentObject var model: ContentModel
     
+    @State var showBasket = false
+    
     var body: some View {
         
         NavigationView {
@@ -37,6 +39,25 @@ struct CustomerProductsView: View {
                         
                         Text("Products")
                             .font(Font.custom("Comfortaa-Bold", size: 30))
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        
+                        Button {
+                            
+                            showBasket = true
+                        } label: {
+                            
+                            Image(systemName: "bag")
+                        }
+                        .sheet(isPresented: $showBasket, onDismiss: {
+                            
+                            // Fetch products for currently logged in business if card is dismissed
+                            
+                        }) {
+                            
+                            BasketView()
+                        }
                     }
                 }
             }

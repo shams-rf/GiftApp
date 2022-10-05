@@ -60,6 +60,7 @@ struct BusinessLaunchView: View {
                         ZStack {
                             
                             CustomButton()
+                                .foregroundColor(.red)
                             
                             Text("Login")
                                 .font(Font.custom("Comfortaa-Bold", size: 15))
@@ -80,6 +81,7 @@ struct BusinessLaunchView: View {
                         ZStack {
                             
                             CustomButton()
+                                .foregroundColor(.red)
                             
                             Text("Create Account")
                                 .font(Font.custom("Comfortaa-Bold", size: 15))

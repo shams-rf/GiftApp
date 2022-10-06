@@ -22,29 +22,39 @@ struct ProductDetailView: View {
         
         VStack {
             
-            VStack(alignment: .leading, spacing: 10) {
+            ScrollView {
                 
-                if let image = image {
+                VStack {
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        if let image = image {
 
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                        }
+                        
+                        Text(product.name)
+                            .font(Font.custom("Comfortaa-Bold", size: 30))
+                            .padding(.leading)
+                        
+                        Text(product.description)
+                            .font(Font.custom("Comfortaa-Regular", size: 15))
+                            .padding(.leading)
+                        
+                        Text("€\(product.price)")
+                            .font(Font.custom("Comfortaa-Regular", size: 15))
+                            .padding(.leading)
+                    }
+                    
+                    Spacer()
                 }
-                
-                Text(product.name)
-                    .font(Font.custom("Comfortaa-Bold", size: 30))
-                    .padding(.leading)
-                
-                Text(product.description)
-                    .font(Font.custom("Comfortaa-Regular", size: 15))
-                    .padding(.leading)
-                
-                Text("€\(product.price)")
-                    .font(Font.custom("Comfortaa-Regular", size: 15))
-                    .padding(.leading)
+                .onAppear {
+                    
+                    getImage(productID: product.id, businessUID: businessUID)
+                }
             }
-            
-            Spacer()
             
             Button {
                 
@@ -72,10 +82,6 @@ struct ProductDetailView: View {
                 
                 EditProductView(formShowing: $showEditProduct, product: product, name: product.name, description: product.description, price: product.price)
             }
-        }
-        .onAppear {
-            
-            getImage(productID: product.id, businessUID: businessUID)
         }
     }
     

@@ -21,39 +21,49 @@ struct CustomerProductDetailView: View {
         
         VStack {
             
-            VStack(alignment: .leading, spacing: 10) {
+            ScrollView {
                 
-                if let image = image {
+                VStack {
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        if let image = image {
 
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                        }
+                        
+                        Text(product.name)
+                            .font(Font.custom("Comfortaa-Bold", size: 30))
+                            .padding(.leading)
+                        
+                        Text(product.description)
+                            .font(Font.custom("Comfortaa-Regular", size: 15))
+                            .padding(.leading)
+                        
+                        Text("€\(product.price)")
+                            .font(Font.custom("Comfortaa-Regular", size: 15))
+                            .padding(.leading)
+                    }
+                    
+                    Spacer()
+                    
+                    if showAddToBasket {
+                        
+                        HStack {
+                            
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(.green)
+                            
+                            Text("Item added to basket")
+                                .font(Font.custom("Comfortaa-Regular", size: 15))
+                        }
+                    }
                 }
-                
-                Text(product.name)
-                    .font(Font.custom("Comfortaa-Bold", size: 30))
-                    .padding(.leading)
-                
-                Text(product.description)
-                    .font(Font.custom("Comfortaa-Regular", size: 15))
-                    .padding(.leading)
-                
-                Text("€\(product.price)")
-                    .font(Font.custom("Comfortaa-Regular", size: 15))
-                    .padding(.leading)
-            }
-            
-            Spacer()
-            
-            if showAddToBasket {
-                
-                HStack {
+                .onAppear {
                     
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.green)
-                    
-                    Text("Item added to basket")
-                        .font(Font.custom("Comfortaa-Regular", size: 15))
+                    getImage(productID: product.id, businessUID: product.business)
                 }
             }
             
@@ -75,10 +85,6 @@ struct CustomerProductDetailView: View {
                 }
             }
             .tint(.white)
-        }
-        .onAppear {
-            
-            getImage(productID: product.id, businessUID: product.business)
         }
     }
     

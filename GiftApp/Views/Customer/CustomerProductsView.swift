@@ -27,10 +27,10 @@ struct CustomerProductsView: View {
                         
                         NavigationLink {
                             
-                            
+                            CustomerProductDetailView(product: product)
                         } label: {
                             
-                            ProductSection(product: product, businessUID: product.business)
+                            CustomerProductSection(product: product, businessUID: product.business)
                         }
 
                     }

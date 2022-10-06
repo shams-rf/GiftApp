@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB12FE6428EEDA9D00EDD662 /* CustomerProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12FE6328EEDA9D00EDD662 /* CustomerProductDetailView.swift */; };
+		DB12FE6628EEDF1400EDD662 /* CustomerProductSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB12FE6528EEDF1400EDD662 /* CustomerProductSection.swift */; };
 		DB28582728EAE48D00518858 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB28582628EAE48D00518858 /* AddProductView.swift */; };
 		DB28582928EB1C2000518858 /* ProductSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB28582828EB1C2000518858 /* ProductSection.swift */; };
 		DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4352C128E8402000C51B44 /* CreateAccountForm.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		DB12FE6328EEDA9D00EDD662 /* CustomerProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProductDetailView.swift; sourceTree = "<group>"; };
+		DB12FE6528EEDF1400EDD662 /* CustomerProductSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProductSection.swift; sourceTree = "<group>"; };
 		DB28582628EAE48D00518858 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
 		DB28582828EB1C2000518858 /* ProductSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSection.swift; sourceTree = "<group>"; };
 		DB4352C128E8402000C51B44 /* CreateAccountForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountForm.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				DB28582828EB1C2000518858 /* ProductSection.swift */,
 				DBE0230528EB432E006B08FE /* ImagePicker.swift */,
 				DBA32B6E28ED9087001C6A76 /* LaunchViewCustomButton.swift */,
+				DB12FE6528EEDF1400EDD662 /* CustomerProductSection.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				DB7DC86B28EC8B7900D109AA /* Constants.swift in Sources */,
 				DBF1FC0C28E7883D008E436B /* BusinessLaunchView.swift in Sources */,
 				DB12FE6428EEDA9D00EDD662 /* CustomerProductDetailView.swift in Sources */,
+				DB12FE6628EEDF1400EDD662 /* CustomerProductSection.swift in Sources */,
 				DBAC832628EDC5BB00BADAD5 /* BasketView.swift in Sources */,
 				DBA32B7128ED94A7001C6A76 /* CustomerLaunchView.swift in Sources */,
 				DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */,

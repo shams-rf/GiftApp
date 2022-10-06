@@ -19,7 +19,7 @@ class ContentModel: ObservableObject {
     
     init() {
         
-        try! Auth.auth().signOut()
+        //try! Auth.auth().signOut()
         
         getBusinesses()
     }

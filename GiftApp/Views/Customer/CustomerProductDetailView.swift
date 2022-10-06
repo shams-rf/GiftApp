@@ -79,11 +79,7 @@ struct CustomerProductDetailView: View {
                 
                 ZStack(alignment: .center) {
                     
-                    Rectangle()
-                        .frame(width: 150, height: 60, alignment: .center)
-                        .foregroundColor(.blue)
-                        .cornerRadius(30)
-                        .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                    OrderButton()
                     
                     Text("Add to Basket")
                         .font(Font.custom("Comfortaa-Bold", size: 15))

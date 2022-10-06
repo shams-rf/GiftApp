@@ -37,6 +37,19 @@ struct BasketSection: View {
                         .scaledToFit()
                         .cornerRadius(5)
                 }
+                
+                Spacer()
+                
+                Button {
+                    
+                    // Delete item from basket
+                } label: {
+                    
+                    Image(systemName: "trash.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.red)
+                }
             }
             .padding()
         }

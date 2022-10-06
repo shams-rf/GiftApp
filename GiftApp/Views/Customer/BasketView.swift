@@ -16,27 +16,38 @@ struct BasketView: View {
     
     var body: some View {
         
-        ScrollView {
+        VStack {
             
-            VStack {
+            ScrollView {
                 
-                ForEach(model.productsInBasket, id:\.self) { product in
+                VStack {
+                    
+                    Text("Basket")
+                        .font(Font.custom("Comfortaa-Bold", size: 30))
+                    
+                    ForEach(model.productsInBasket, id:\.self) { product in
 
-                    BasketSection(product: product)
+                        BasketSection(product: product)
+                    }
+                }
+                .padding()
+                .onAppear {
+                    
+                    // Get items currently in basket
+                    model.getItemsInBasket(customerUID: currentCustomerUID)
                 }
             }
-            .onAppear {
+            
+            Spacer()
+            
+            ZStack {
                 
-                // Get items currently in basket
-                //model.getItemsInBasket(customerUID: currentCustomerUID)
+                OrderButton()
+                    .font(Font.custom("Comfortaa-Bold", size: 15))
+                
+                Text("Buy Now")
+                    .foregroundColor(.white)
             }
         }
-    }
-}
-
-struct BasketView_Previews: PreviewProvider {
-    static var previews: some View {
-        BasketView()
-            .environmentObject(ContentModel())
     }
 }

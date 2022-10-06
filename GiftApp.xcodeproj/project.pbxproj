@@ -15,6 +15,7 @@
 		DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4352C128E8402000C51B44 /* CreateAccountForm.swift */; };
 		DB6AEA0F28E8E10900C917FB /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA0E28E8E10900C917FB /* Business.swift */; };
 		DB6AEA1328E8E50800C917FB /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AEA1228E8E50800C917FB /* ProductsView.swift */; };
+		DB6C3ACD28EF354E00F1888B /* OrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C3ACC28EF354E00F1888B /* OrderButton.swift */; };
 		DB6D070C28EB25BA00B349D9 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */; };
 		DB7DC85328EC4CCA00D109AA /* EditProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DC85228EC4CCA00D109AA /* EditProductView.swift */; };
 		DB7DC86428EC7FF600D109AA /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB7DC85F28EC7FF500D109AA /* Comfortaa-Regular.ttf */; };
@@ -57,6 +58,7 @@
 		DB4352C128E8402000C51B44 /* CreateAccountForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountForm.swift; sourceTree = "<group>"; };
 		DB6AEA0E28E8E10900C917FB /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		DB6AEA1228E8E50800C917FB /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		DB6C3ACC28EF354E00F1888B /* OrderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderButton.swift; sourceTree = "<group>"; };
 		DB6D070B28EB25BA00B349D9 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		DB7DC85228EC4CCA00D109AA /* EditProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductView.swift; sourceTree = "<group>"; };
 		DB7DC85B28EC7B3100D109AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				DB12FE6528EEDF1400EDD662 /* CustomerProductSection.swift */,
 				DB12FE6828EF245700EDD662 /* BasketSection.swift */,
+				DB6C3ACC28EF354E00F1888B /* OrderButton.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -140,8 +143,8 @@
 				DBAC831F28EDA6BA00BADAD5 /* CustomerCreateAccountForm.swift */,
 				DBAC832128EDA88100BADAD5 /* CustomerContentView.swift */,
 				DBAC832328EDA8D700BADAD5 /* CustomerProductsView.swift */,
-				DBAC832528EDC5BB00BADAD5 /* BasketView.swift */,
 				DB12FE6328EEDA9D00EDD662 /* CustomerProductDetailView.swift */,
+				DBAC832528EDC5BB00BADAD5 /* BasketView.swift */,
 				DB12FE6728EF242F00EDD662 /* ReusableViews */,
 			);
 			path = Customer;
@@ -332,6 +335,7 @@
 				DBAC832228EDA88100BADAD5 /* CustomerContentView.swift in Sources */,
 				DBA32B6F28ED9087001C6A76 /* LaunchViewCustomButton.swift in Sources */,
 				DBA32B6D28ED8D5A001C6A76 /* LaunchView.swift in Sources */,
+				DB6C3ACD28EF354E00F1888B /* OrderButton.swift in Sources */,
 				DBF1FBF628E77EA5008E436B /* BusinessContentView.swift in Sources */,
 				DB4352C228E8402000C51B44 /* CreateAccountForm.swift in Sources */,
 				DBF1FC0E28E78C00008E436B /* ContentModel.swift in Sources */,

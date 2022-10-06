@@ -1,5 +1,5 @@
 //
-//  CustomerProductSection.swift
+//  BasketSection.swift
 //  GiftApp
 //
 //  Created by Shamsuddin Refaei on 06/10/2022.
@@ -8,12 +8,11 @@
 import SwiftUI
 import FirebaseStorage
 
-struct CustomerProductSection: View {
+struct BasketSection: View {
     
     @EnvironmentObject var model:ContentModel
     
     var product: Product
-    var businessUID: String
     @State var image: UIImage?
     
     var body: some View {
@@ -45,7 +44,7 @@ struct CustomerProductSection: View {
         .frame(height: 80)
         .onAppear(perform: {
             
-            getImage(productID: product.id, businessUID: businessUID)
+            getImage(productID: product.id, businessUID: product.business)
         })
     }
     
@@ -76,9 +75,9 @@ struct CustomerProductSection: View {
     }
 }
 
-struct CustomerProductSection_Previews: PreviewProvider {
+struct BasketSection_Previews: PreviewProvider {
     static var previews: some View {
-        CustomerProductSection(product: Product(id: "", business: "", name: "Roses", description: "", price: ""), businessUID: "")
+        BasketSection(product: Product(id: "", business: "", name: "Roses", description: "", price: ""))
             .environmentObject(ContentModel())
     }
 }

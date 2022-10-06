@@ -30,9 +30,8 @@ struct CustomerProductsView: View {
                             CustomerProductDetailView(product: product)
                         } label: {
                             
-                            CustomerProductSection(product: product, businessUID: product.business)
+                            CustomerProductSection(product: product)
                         }
-
                     }
                 }
                 .onAppear(perform: {

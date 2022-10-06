@@ -16,22 +16,20 @@ struct BasketView: View {
     
     var body: some View {
         
-        VStack {
+        ScrollView {
             
-            if model.productsInBasket == [] {
+            VStack {
                 
-                Text("No products in basket")
-                    .font(Font.custom("Comfortaa-Regular", size: 15))
+                ForEach(model.productsInBasket, id:\.self) { product in
+
+                    BasketSection(product: product)
+                }
             }
-            
-            ForEach(model.productsInBasket, id:\.self) { product in
+            .onAppear {
                 
-                Text(product.name)
+                // Get items currently in basket
+                //model.getItemsInBasket(customerUID: currentCustomerUID)
             }
-        }
-        .onAppear {
-            
-            model.getItemsInBasket(customerUID: currentCustomerUID)
         }
     }
 }

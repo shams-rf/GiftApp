@@ -1,22 +1,21 @@
 //
-//  ProductDetailView.swift
+//  CustomerProductDetailView.swift
 //  GiftApp
 //
-//  Created by Shamsuddin Refaei on 03/10/2022.
+//  Created by Shamsuddin Refaei on 06/10/2022.
 //
 
 import SwiftUI
 import FirebaseStorage
 
-struct ProductDetailView: View {
+struct CustomerProductDetailView: View {
     
     @EnvironmentObject var model: ContentModel
     
     var product: Product
-    var businessUID: String
     @State var image: UIImage?
     
-    @State var showEditProduct = false
+    @State var showAddToBasket = false
     
     var body: some View {
         
@@ -46,36 +45,40 @@ struct ProductDetailView: View {
             
             Spacer()
             
+            if showAddToBasket {
+                
+                HStack {
+                    
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.green)
+                    
+                    Text("Item added to basket")
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
+                }
+            }
+            
             Button {
                 
-                showEditProduct = true
+                showAddToBasket = true
             } label: {
                 
                 ZStack(alignment: .center) {
                     
                     Rectangle()
                         .frame(width: 150, height: 60, alignment: .center)
-                        .foregroundColor(.red)
+                        .foregroundColor(.blue)
                         .cornerRadius(30)
                         .shadow(color: .gray, radius: 10, x: 10, y: 10)
                     
-                    Text("Edit")
+                    Text("Add to Basket")
                         .font(Font.custom("Comfortaa-Bold", size: 15))
                 }
             }
             .tint(.white)
-            .sheet(isPresented: $showEditProduct, onDismiss: {
-                
-                // Fetch products for currently logged in business if card is dismissed
-                model.getProductsByBusiness(UID: businessUID)
-            }) {
-                
-                EditProductView(formShowing: $showEditProduct, product: product, name: product.name, description: product.description, price: product.price)
-            }
         }
         .onAppear {
             
-            getImage(productID: product.id, businessUID: businessUID)
+            getImage(productID: product.id, businessUID: product.business)
         }
     }
     
@@ -99,9 +102,9 @@ struct ProductDetailView: View {
     }
 }
 
-struct ProductDetailView_Previews: PreviewProvider {
+struct CustomerProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailView(product: Product(id: "", business: "", name: "Roses", description: "Red roses freshly picked", price: "4.99"), businessUID: "")
+        CustomerProductDetailView(product: Product(id: "", business: "", name: "Roses", description: "Red roses freshly picked", price: "4.99"))
             .environmentObject(ContentModel())
     }
 }

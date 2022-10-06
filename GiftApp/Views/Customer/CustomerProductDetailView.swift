@@ -7,10 +7,13 @@
 
 import SwiftUI
 import FirebaseStorage
+import FirebaseAuth
 
 struct CustomerProductDetailView: View {
     
     @EnvironmentObject var model: ContentModel
+    
+    var currentCustomerUID = Auth.auth().currentUser?.uid ?? ""
     
     var product: Product
     @State var image: UIImage?
@@ -48,18 +51,6 @@ struct CustomerProductDetailView: View {
                     }
                     
                     Spacer()
-                    
-                    if showAddToBasket {
-                        
-                        HStack {
-                            
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.green)
-                            
-                            Text("Item added to basket")
-                                .font(Font.custom("Comfortaa-Regular", size: 15))
-                        }
-                    }
                 }
                 .onAppear {
                     
@@ -67,7 +58,21 @@ struct CustomerProductDetailView: View {
                 }
             }
             
+            if showAddToBasket {
+                
+                HStack {
+                    
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.green)
+                    
+                    Text("Item added to basket")
+                        .font(Font.custom("Comfortaa-Regular", size: 15))
+                }
+            }
+            
             Button {
+                
+                model.addToBasket(customerUID: currentCustomerUID, productID: product.id)
                 
                 showAddToBasket = true
             } label: {

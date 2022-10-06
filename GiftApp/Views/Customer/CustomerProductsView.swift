@@ -59,8 +59,8 @@ struct CustomerProductsView: View {
                         }
                         .sheet(isPresented: $showBasket, onDismiss: {
                             
-                            // Fetch products for currently logged in business if card is dismissed
-                            
+                            // Fetch all products if card is dismissed
+                            model.getAllProducts()
                         }) {
                             
                             BasketView()

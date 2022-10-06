@@ -15,6 +15,7 @@ class ContentModel: ObservableObject {
     
     @Published var businesses: [Business] = []
     @Published var products: [Product] = []
+    @Published var productsInBasket: [Product] = []
     
     init() {
         
@@ -202,6 +203,98 @@ class ContentModel: ObservableObject {
                 }
                 
                 self.products = allProducts
+            }
+        }
+    }
+    
+    var basketCounter = 0
+    
+    func addToBasket(customerUID: String, productID: String) {
+        
+        let db = Firestore.firestore()
+        
+        let basket = db.collection("basket")
+        
+        let customer = basket.document(customerUID)
+        
+        customer.setData(["productID\(basketCounter)":productID], merge: true)
+        
+        self.basketCounter += 1
+    }
+    
+    func getItemsInBasket(customerUID: String) {
+        
+        self.productsInBasket = []
+        
+        let db = Firestore.firestore()
+        
+        let basket = db.collection("basket")
+        
+        let doc = basket.document(customerUID)
+        
+        doc.getDocument { docSnapshot, error in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
+            }
+            else if let docSnapshot = docSnapshot {
+                
+                if let data = docSnapshot.data() {
+                    
+                    for product in data {
+                        
+                        let name = product.value as? String ?? ""
+                        
+                        self.getProductByID(productID: name)
+                    }
+                }
+                else {
+                 
+                    return
+                }
+            }
+            else {
+                
+                print("No data returned")
+            }
+        }
+    }
+    
+    func getProductByID(productID: String) {
+        
+        let db = Firestore.firestore()
+        
+        let productRef = db.collection("products").document(productID)
+        
+        productRef.getDocument { docSnapshot, error in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
+            }
+            else if let docSnapshot = docSnapshot {
+                
+                if let data = docSnapshot.data() {
+                    
+                    let id = productID
+                    let business = data["business"] as? String ?? ""
+                    let name = data["name"] as? String ?? ""
+                    let description = data["description"] as? String ?? ""
+                    let price = data["price"] as? String ?? ""
+                    
+                    let product = Product(id: id, business: business, name: name, description: description, price: price)
+                    
+                    self.productsInBasket.append(product)
+                }
+                else {
+                    
+                    return
+                }
+            }
+            else {
+                
+                print("No data returned")
             }
         }
     }

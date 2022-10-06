@@ -25,7 +25,14 @@ struct CustomerProductsView: View {
                     
                     ForEach(model.products, id:\.self) { product in
                         
-                        Text(product.name)
+                        NavigationLink {
+                            
+                            
+                        } label: {
+                            
+                            ProductSection(product: product, businessUID: product.business)
+                        }
+
                     }
                 }
                 .onAppear(perform: {

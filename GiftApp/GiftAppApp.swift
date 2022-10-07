@@ -13,12 +13,14 @@ struct GiftAppApp: App {
     
     init() {
         
+        // Initialise FirebaseApp
         FirebaseApp.configure()
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchView()
+                .environmentObject(ContentModel())
         }
     }
 }

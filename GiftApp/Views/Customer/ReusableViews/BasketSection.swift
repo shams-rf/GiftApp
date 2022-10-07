@@ -1,0 +1,96 @@
+//
+//  BasketSection.swift
+//  GiftApp
+//
+//  Created by Shamsuddin Refaei on 06/10/2022.
+//
+
+import SwiftUI
+import FirebaseStorage
+
+struct BasketSection: View {
+    
+    @EnvironmentObject var model:ContentModel
+    
+    var product: Product
+    @State var image: UIImage?
+    
+    var body: some View {
+        
+        ZStack(alignment: .leading) {
+            
+            Rectangle()
+                .foregroundColor(Constants.pastelBlue)
+                .cornerRadius(10)
+            
+            HStack {
+                
+                Text(product.name)
+                    .font(Font.custom("Comfortaa-Regular", size: 15))
+                
+                Spacer()
+                
+                if let image = image {
+                    
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(5)
+                }
+                
+                Spacer()
+                
+                Button {
+                    
+                    // Delete item from basket
+                } label: {
+                    
+                    Image(systemName: "trash.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.red)
+                }
+            }
+            .padding()
+        }
+        .padding(.horizontal)
+        .frame(height: 80)
+        .onAppear(perform: {
+            
+            getImage(productID: product.id, businessUID: product.business)
+        })
+    }
+    
+    func getImage(productID: String, businessUID: String) {
+        
+        let ref = Storage.storage().reference().child("\(businessUID)/\(productID)")
+        
+        ref.downloadURL { url, error in
+            
+            if error == nil && url != nil {
+                
+                do {
+                    
+                    let data = try Data(contentsOf: url!)
+                    let image = UIImage(data: data as Data)
+                    self.image = image
+                }
+                catch {
+                    
+                    print(error.localizedDescription)
+                }
+            }
+            else {
+                
+                print(error!.localizedDescription)
+            }
+        }
+    }
+}
+
+struct BasketSection_Previews: PreviewProvider {
+    static var previews: some View {
+        BasketSection(product: Product(id: "", business: "", name: "Roses", description: "", price: ""))
+            .environmentObject(ContentModel())
+    }
+}
